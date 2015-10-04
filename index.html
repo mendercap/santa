@@ -11,37 +11,38 @@
 <tw-story></tw-story>
 
 <tw-storydata name="Secret Santa" startnode="1" creator="Twine" creator-version="2.0.6" ifid="719FFFB5-527B-4D71-A792-FD136CB7B770" format="Harlowe" options=""><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">body {
-    background-color: #000;
-    background-image: url('http://i.imgur.com/BiSmXaq.png'), url('http://i.imgur.com/XHuy0NJ.png'), url('http://i.imgur.com/okpRxJU.png');
-    -webkit-animation: snow 20s linear infinite;
-    -moz-animation: snow 20s linear infinite;
-    -ms-animation: snow 20s linear infinite;
+  	background-color: #000;
+  	background-image: url('http://i.imgur.com/BiSmXaq.png'), url('http://i.imgur.com/XHuy0NJ.png'), url('http://i.imgur.com/okpRxJU.png');
+  	-webkit-animation: snow 20s linear infinite;
+  	-moz-animation: snow 20s linear infinite;
+  	-ms-animation: snow 20s linear infinite;
     animation: snow 20s linear infinite;
 }
 
 tw-story {
-        z-index: 999;
-        color: #fff;
-        padding: 20px;
-        border-style: solid;
-        border-width: 1px;
-        background-color: #000;
+    z-index: 999;
+    color: #fff;
+    padding: 20px;
+    border-style: solid;
+    border-width: 1px;
+		border-radius: 5px;
+    background-color: #000;
 }
 
 tw-link {
-        color: #4CBB17;
+    color: #4CBB17;
 }
 
 tw-link:hover {
-        color: #308014;
+    color: #308014;
 }
 
 tw-link.visited {
-        color: #4CBB17;
+    color: #CD2626;
 }
 
 tw-link.visited:hover {
-        color: #308014;
+    color: #8E2323;
 }
 
 @-webkit-keyframes snow {
@@ -77,7 +78,7 @@ You feel your heart begin to race and take a moment to steady your breathing. As
 
 “Yes? What do you want then?”
 
-[[“I’m here to see Santa.”|A (luke)warm welcome]]</tw-passagedata><tw-passagedata pid="4" name="A (luke)warm welcome" tags="" position="286.6666666666667,433.33333333333337">“Of course you are. Well, go on then. What’s the [[password|Klaatu Barada . . .]]?”</tw-passagedata><tw-passagedata pid="5" name="Klaatu Barada . . ." tags="" position="418.33333333333337,431.6666666666667">{(set: $password to (prompt: &quot;What is the password?&quot;))(set: $password to $password.toLowerCase())}{(if: $password is &quot;jammie dodgers&quot;)[The eyes grow narrow for a moment, then snap open in recognition. [[“Hannah!|. . . Nikto]]”](elseif: $password is &quot;ginger snaps&quot;)[The eyes grow narrow for a moment, then snap open in recognition. [[“Hsian!|. . . Nikto]]”](elseif: $password is &quot;butter pecans&quot;)[The eyes grow narrow for a moment, then snap open in recognition. [[“Rebekah!|. . . Nikto]]”](elseif: $password is &quot;custard creams&quot;)[The eyes grow narrow for a moment, then snap open in recognition. [[“Zi!”|. . . Nikto]]](else:)[“What? No. [[Try again.|Klaatu Barada . . .]]”]}</tw-passagedata><tw-passagedata pid="6" name=". . . Nikto" tags="" position="418.33333333333337,305">The door swings open, and the elf (it must be!) frantically ushers you [[inside|Within the icy halls]].</tw-passagedata><tw-passagedata pid="7" name="Within the icy halls" tags="" position="421.6666666666667,175">The great hall is a hive of activity. Hundreds of elves dart from one doorway to the next, often carting some improbable load of presents before them. All about them, the walls and the ceiling are alive with northern lights.
+[[“I’m here to see Santa.”|A (luke)warm welcome]]</tw-passagedata><tw-passagedata pid="4" name="A (luke)warm welcome" tags="" position="286.6666666666667,433.33333333333337">“Of course you are. Well, go on then. What’s the [[password|Klaatu Barada . . .]]?”</tw-passagedata><tw-passagedata pid="5" name="Klaatu Barada . . ." tags="" position="418.33333333333337,431.6666666666667">{(set: $password to (prompt: &quot;What is the password?&quot;))(set: $password to $password.toLowerCase())}{(if: $password is &quot;jammie dodgers&quot;)[The eyes grow narrow for a moment, then snap open in recognition. [[“Hannah!”|. . . Nikto]]](elseif: $password is &quot;ginger snaps&quot;)[The eyes grow narrow for a moment, then snap open in recognition. [[“Hsian!”|. . . Nikto]]](elseif: $password is &quot;butter pecans&quot;)[The eyes grow narrow for a moment, then snap open in recognition. [[“Rebekah!”|. . . Nikto]]](elseif: $password is &quot;custard creams&quot;)[The eyes grow narrow for a moment, then snap open in recognition. [[“Zi!”|. . . Nikto]]](else:)[“What? No. [[Try again.|Klaatu Barada . . .]]”]}</tw-passagedata><tw-passagedata pid="6" name=". . . Nikto" tags="" position="418.33333333333337,305">The door swings open, and the elf (it must be!) frantically ushers you [[inside|Within the icy halls]].</tw-passagedata><tw-passagedata pid="7" name="Within the icy halls" tags="" position="421.6666666666667,175">The great hall is a hive of activity. Hundreds of elves dart from one doorway to the next, often carting some improbable load of presents before them. All about them, the walls and the ceiling are alive with northern lights.
 
 The elf who let you in points up at the staircase at the end of the hall. The stairs lead up to a large, windswept archway.
 
@@ -95,9 +96,9 @@ He towers over you, a giant with a bright red coat and a fantastic white beard. 
 
 He pats his coat down and produces a list from one of the pockets, then a pair of round spectacles from another. 
 
-“Let’s see, your [[Secret Santa]] this year will be . . .”</tw-passagedata><tw-passagedata pid="11" name="Secret Santa" tags="" position="696.6666666666667,430">With a pair of spectacles now perched on his nose, Santa runs his eyes over the list. After a moment, he looks back at you, beaming.
+“Let’s see, your [[Secret Santa]] this year will be—”</tw-passagedata><tw-passagedata pid="11" name="Secret Santa" tags="" position="696.6666666666667,430">With a pair of spectacles now perched on his nose, Santa runs his eyes over the list. After a moment, he looks back at you, beaming.
 
-“It says here, {(if: $password is &quot;jammie dodgers&quot;)[Hannah, that your Secret Santa this year is **Hsian**.”](elseif: $password is &quot;ginger snaps&quot;)[Hsian, that your Secret Santa this year is **Hannah**.”](elseif: $password is &quot;butter pecans&quot;)[Rebekah, that your Secret Santa this year is **Zi**.”](elseif: $password is &quot;custard creams&quot;)[Zi, that your Secret Santa this year is **Rebekah**.”]}</tw-passagedata></tw-storydata>
+“It says here, {(if: $password is &quot;jammie dodgers&quot;)[Hannah, that your Secret Santa this year is **HSIAN**.”](elseif: $password is &quot;ginger snaps&quot;)[Hsian, that your Secret Santa this year is **HANNAH**.”](elseif: $password is &quot;butter pecans&quot;)[Rebekah, that your Secret Santa this year is **ZI**.”](elseif: $password is &quot;custard creams&quot;)[Zi, that your Secret Santa this year is **REBEKAH**.”]}</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">/**
  * @license almond 0.3.0 Copyright (c) 2011-2014, The Dojo Foundation All Rights Reserved.
