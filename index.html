@@ -10,27 +10,84 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="Secret Santa" startnode="1" creator="Twine" creator-version="2.0.6" ifid="719FFFB5-527B-4D71-A792-FD136CB7B770" format="Harlowe" options=""><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Before the Ice Palace" tags="" position="153.33333333333334,171.66666666666669">The treacherous path brings you into full view of Santa&#x27;s palace. A structure of solid ice, it appears carved from a single block, rather than built from the ground up. The northern lights paint a blaze of green fire across its walls.
+<tw-storydata name="Secret Santa" startnode="1" creator="Twine" creator-version="2.0.6" ifid="719FFFB5-527B-4D71-A792-FD136CB7B770" format="Harlowe" options=""><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">body {
+    background-color: #000;
+    background-image: url('http://i.imgur.com/BiSmXaq.png'), url('http://i.imgur.com/XHuy0NJ.png'), url('http://i.imgur.com/okpRxJU.png');
+    -webkit-animation: snow 20s linear infinite;
+    -moz-animation: snow 20s linear infinite;
+    -ms-animation: snow 20s linear infinite;
+    animation: snow 20s linear infinite;
+}
+
+tw-story {
+        z-index: 999;
+        color: #fff;
+        padding: 20px;
+        border-style: solid;
+        border-width: 1px;
+        background-color: #000;
+}
+
+tw-link {
+        color: #4CBB17;
+}
+
+tw-link:hover {
+        color: #308014;
+}
+
+tw-link.visited {
+        color: #4CBB17;
+}
+
+tw-link.visited:hover {
+        color: #308014;
+}
+
+@-webkit-keyframes snow {
+    0% { background-position: 0px 0px, 0px 0px, 0px 0px }
+    100% {
+        background-position: 500px 1000px, 400px 400px, 300px 300px;
+    }
+}
+@-moz-keyframes snow {
+    0% { background-position: 0px 0px, 0px 0px, 0px 0px }
+    100% {
+        background-position: 500px 1000px, 400px 400px, 300px 300px;
+    }
+}
+@-ms-keyframes snow {
+    0% { background-position: 0px 0px, 0px 0px, 0px 0px }
+    100% {
+        background-position: 500px 1000px, 400px 400px, 300px 300px;
+    }
+}
+@keyframes snow {
+    0% { background-position: 0px 0px, 0px 0px, 0px 0px }
+    100% {
+        background-position: 500px 1000px, 400px 400px, 300px 300px;
+    }
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Before the Ice Palace" tags="" position="153.33333333333334,171.66666666666669">The treacherous path brings you into full view of Santa&#x27;s palace. A structure of solid ice, it appears carved from a single block, rather than built from the ground up. The northern lights paint a blaze of green fire across its walls.
 
 A dark rectangle, stark against the pearlescent white palace, marks [[the entrance|At the door]].</tw-passagedata><tw-passagedata pid="2" name="At the door" tags="" position="288,175">You approach the door. Dark silhouettes betray a flurry of activity on the other side of the crystalline wall.
 
-A cast iron [[knocker|The door opens]] in the shape of a mistletoe wreath hangs off the door.</tw-passagedata><tw-passagedata pid="3" name="The door opens" tags="" position="287,305">You raise the knocker and let it fall against the metal door. A single clear note cuts through the wailing of the wind.
+A cast iron [[knocker|The door opens]] in the shape of a mistletoe wreath hangs off the door.</tw-passagedata><tw-passagedata pid="3" name="The door opens" tags="" position="286.6666666666667,305">You raise the knocker and let it fall against the metal door. A single clear note cuts through the wailing of the wind.
 
 You feel your heart begin to race and take a moment to steady your breathing. As you exhale a steady puff of steam, the door cracks open with a yelp of frozen hinges, and a pair of beady eyes look up at you from the gap.
 
 “Yes? What do you want then?”
 
-[[“I’m here to see Santa.”|A (luke)warm welcome]]</tw-passagedata><tw-passagedata pid="4" name="A (luke)warm welcome" tags="" position="287,434">“Of course you are. Well, go on then. What’s the [[password|Klaatu Barada . . .]]?”</tw-passagedata><tw-passagedata pid="5" name="Klaatu Barada . . ." tags="" position="418.33333333333337,431.6666666666667">{(set: $password to (prompt: &quot;What is the password?&quot;))(set: $password to $password.toLowerCase())}{(if: $password is &quot;jammie dodgers&quot;)[The eyes grow narrow for a moment, then snap open in recognition. [[“Hannah!|. . . Nikto]]”](elseif: $password is &quot;ginger snaps&quot;)[The eyes grow narrow for a moment, then snap open in recognition. [[“Hsian!|. . . Nikto]]”](elseif: $password is &quot;butter pecans&quot;)[The eyes grow narrow for a moment, then snap open in recognition. [[“Rebekah!|. . . Nikto]]”](elseif: $password is &quot;custard creams&quot;)[The eyes grow narrow for a moment, then snap open in recognition. [[“Zi!”|. . . Nikto]]](else:)[“What? No. [[Try again.|Klaatu Barada . . .]]”]}</tw-passagedata><tw-passagedata pid="6" name=". . . Nikto" tags="" position="418.33333333333337,305">The door swings open, and the elf (it must be!) frantically ushers you [[inside|Within the icy halls]].</tw-passagedata><tw-passagedata pid="7" name="Within the icy halls" tags="" position="421.6666666666667,175">The great hall is a hive of activity. Hundreds of elves dart from one doorway to the next, often carting some improbable load of presents before them. All about them, the walls and the ceiling are alive with northern lights.
+[[“I’m here to see Santa.”|A (luke)warm welcome]]</tw-passagedata><tw-passagedata pid="4" name="A (luke)warm welcome" tags="" position="286.6666666666667,433.33333333333337">“Of course you are. Well, go on then. What’s the [[password|Klaatu Barada . . .]]?”</tw-passagedata><tw-passagedata pid="5" name="Klaatu Barada . . ." tags="" position="418.33333333333337,431.6666666666667">{(set: $password to (prompt: &quot;What is the password?&quot;))(set: $password to $password.toLowerCase())}{(if: $password is &quot;jammie dodgers&quot;)[The eyes grow narrow for a moment, then snap open in recognition. [[“Hannah!|. . . Nikto]]”](elseif: $password is &quot;ginger snaps&quot;)[The eyes grow narrow for a moment, then snap open in recognition. [[“Hsian!|. . . Nikto]]”](elseif: $password is &quot;butter pecans&quot;)[The eyes grow narrow for a moment, then snap open in recognition. [[“Rebekah!|. . . Nikto]]”](elseif: $password is &quot;custard creams&quot;)[The eyes grow narrow for a moment, then snap open in recognition. [[“Zi!”|. . . Nikto]]](else:)[“What? No. [[Try again.|Klaatu Barada . . .]]”]}</tw-passagedata><tw-passagedata pid="6" name=". . . Nikto" tags="" position="418.33333333333337,305">The door swings open, and the elf (it must be!) frantically ushers you [[inside|Within the icy halls]].</tw-passagedata><tw-passagedata pid="7" name="Within the icy halls" tags="" position="421.6666666666667,175">The great hall is a hive of activity. Hundreds of elves dart from one doorway to the next, often carting some improbable load of presents before them. All about them, the walls and the ceiling are alive with northern lights.
 
 The elf who let you in points up at the staircase at the end of the hall. The stairs lead up to a large, windswept archway.
 
 “The boss is up on the landing pad, {(if: $password is &quot;jammie dodgers&quot;)[Hannah.](elseif: $password is &quot;ginger snaps&quot;)[Hsian.](elseif: $password is &quot;butter pecans&quot;)[Rebekah.](elseif: $password is &quot;custard creams&quot;)[Zi.]} You’ll catch him if you [[hurry|On the landing pad]].”</tw-passagedata><tw-passagedata pid="8" name="On the landing pad" tags="" position="555,175">As you carefully make your way up the icy staircase and out onto the balcony, the wind picks up again. Snowflakes dance around you in a flurry and, for a moment, you don’t even notice the [[sleigh|Santa’s reindeers]].</tw-passagedata><tw-passagedata pid="9" name="Santa’s reindeers" tags="" position="555,306.6666666666667">The sleigh looks magnificent; there is something about its weatherbeaten frame that steals your breath away, as you imagine it soaring through the night sky.
 
-A snort brings you our of your reverie and, for the first time, you notice the reindeer. There is little of the children&#x27;s cartoons and the shopping mall cut-outs about them. Eight pairs of red eyes, ancient and untamed, stare at you.
+A snort brings you our of your reverie and, for the first time, you notice the reindeer. There is little of the children’s cartoons and the shopping mall cut-outs about them. Eight pairs of red eyes, ancient and untamed, stare at you.
 
 “What have we here?”
 
-Your heart jumps and you [[turn around|Santa!]] with a startle.</tw-passagedata><tw-passagedata pid="10" name="Santa!" tags="" position="551.6666666666667,431.6666666666667">It’s Santa Claus.
+Your heart does a backflip, and you [[turn around|Santa!]] with a startle.</tw-passagedata><tw-passagedata pid="10" name="Santa!" tags="" position="551.6666666666667,431.6666666666667">It’s Santa Claus.
 
 He towers over you, a giant with a bright red coat and a fantastic white beard. There is a faint smell of sherry in the air as he says:
 
@@ -40,7 +97,7 @@ He pats his coat down and produces a list from one of the pockets, then a pair o
 
 “Let’s see, your [[Secret Santa]] this year will be . . .”</tw-passagedata><tw-passagedata pid="11" name="Secret Santa" tags="" position="696.6666666666667,430">With a pair of spectacles now perched on his nose, Santa runs his eyes over the list. After a moment, he looks back at you, beaming.
 
-“It says here, {(if: $password is &quot;jammie dodgers&quot;)[Hannah, that your Secret Santa this year is Hsian.”](elseif: $password is &quot;ginger snaps&quot;)[Hsian, that your Secret Santa this year is Hannah.”](elseif: $password is &quot;butter pecans&quot;)[Rebekah, that your Secret Santa this year is Zi.”](elseif: $password is &quot;custard creams&quot;)[Zi, that your Secret Santa this year is Rebekah.”]}</tw-passagedata></tw-storydata>
+“It says here, {(if: $password is &quot;jammie dodgers&quot;)[Hannah, that your Secret Santa this year is **Hsian**.”](elseif: $password is &quot;ginger snaps&quot;)[Hsian, that your Secret Santa this year is **Hannah**.”](elseif: $password is &quot;butter pecans&quot;)[Rebekah, that your Secret Santa this year is **Zi**.”](elseif: $password is &quot;custard creams&quot;)[Zi, that your Secret Santa this year is **Rebekah**.”]}</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">/**
  * @license almond 0.3.0 Copyright (c) 2011-2014, The Dojo Foundation All Rights Reserved.
